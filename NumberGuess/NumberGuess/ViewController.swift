@@ -41,7 +41,10 @@ class ViewController: UIViewController {
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         let guessedNumber = model.compare(guessedString: textField.text!)
-        return false
+        if (guessedNumber != 1 && guessedNumber != -1) {
+            return true
+        }else {
+            return false
+        }
     }
-
 }
