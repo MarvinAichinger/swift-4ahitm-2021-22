@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gGZ-1W-4Ci">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--rate mal-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NumberGuess" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,11 +38,12 @@
                                 <state key="normal" title="Guess me"/>
                                 <connections>
                                     <action selector="guessButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eSN-fm-TFD"/>
+                                    <segue destination="0Gk-L4-FK5" kind="show" identifier="detail" id="efa-B1-zjy"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5vE-OX-tus" secondAttribute="trailing" constant="20" id="I0o-a8-NxT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="alU-gs-X9g" secondAttribute="bottom" constant="303" id="VSo-8m-iuT"/>
@@ -53,6 +54,7 @@
                             <constraint firstItem="5vE-OX-tus" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ySB-XD-IUy"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="rate mal" id="tXG-KB-SpC"/>
                     <connections>
                         <outlet property="guessButton" destination="alU-gs-X9g" id="fTF-QU-oBm"/>
                         <outlet property="label" destination="Mtd-3R-VQl" id="RmI-pl-VLm"/>
@@ -63,10 +65,45 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qgk-oq-8TG">
+            <objects>
+                <navigationController id="gGZ-1W-4Ci" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eNj-KL-NRp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DIc-TQ-xZB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TjF-W1-na2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-752" y="55"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Yiq-fd-c4V">
+            <objects>
+                <viewController id="0Gk-L4-FK5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dzq-NI-s9h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XM4-Vz-yFi"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="54U-Qv-Q6S"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fr5-v7-SY8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="907" y="116"/>
+        </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
